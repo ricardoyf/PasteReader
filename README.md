@@ -1,5 +1,5 @@
 <!-- app-release:start -->
-[**Descargar APK v6**](https://github.com/ricardoyf/PasteReader/releases/download/v6/PasteReader-v6-app-debug.apk) · [SHA-256](https://github.com/ricardoyf/PasteReader/releases/download/v6/PasteReader-v6-app-debug.apk.sha256)
+[**Descargar APK v6**](https://github.com/ricardoyf/PasteReader/releases/download/v6/PasteReader-v6-app-debug.apk) · [SHA-256](https://github.com/ricardoyf/PasteReader/raw/refs/heads/main/checksums/PasteReader-v6-app-debug.apk.sha256)
 
 `fb4ef13ab304497d675993cc29991c637a925134393ac6ce556fd95622fafce9`
 <!-- app-release:end -->
