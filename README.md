@@ -1,3 +1,9 @@
+<!-- app-release:start -->
+[**Descargar APK v6**](https://github.com/ricardoyf/PasteReader/releases/download/v6/PasteReader-v6-app-debug.apk) · [SHA-256](https://github.com/ricardoyf/PasteReader/releases/download/v6/PasteReader-v6-app-debug.apk.sha256)
+
+`fb4ef13ab304497d675993cc29991c637a925134393ac6ce556fd95622fafce9`
+<!-- app-release:end -->
+
 # PasteReader v6
 
 App Android nativa en Kotlin + Jetpack Compose para pegar un texto cualquiera y escucharlo al momento con el TTS nativo de Android.
@@ -36,7 +42,6 @@ PasteReader
 ## Compilar APK
 
 ```bash
-cd "/home/n95/gDrive/gitHub/pastereader"
 ./gradlew assembleDebug
 ```
 
