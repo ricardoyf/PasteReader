@@ -8,5 +8,6 @@ local.properties
 *.zip
 *.apk
 *.apk.sha256
+!checksums/*.sha256
 !PasteReader-v6-app-debug.apk
 

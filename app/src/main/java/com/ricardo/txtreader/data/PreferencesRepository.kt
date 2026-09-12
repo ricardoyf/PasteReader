@@ -16,7 +16,10 @@ import kotlinx.coroutines.flow.map
 import org.json.JSONArray
 import org.json.JSONObject
 import java.text.Normalizer
-import java.time.Instant
+import java.text.SimpleDateFormat
+import java.util.Date
+import java.util.Locale
+import java.util.TimeZone
 
 private val Context.dataStore by preferencesDataStore(name = "txt_reader_prefs")
 
@@ -119,7 +122,7 @@ class PreferencesRepository(private val context: Context) {
         return JSONObject()
             .put("type", "tts_reader_backup")
             .put("version", 1)
-            .put("exportedAt", Instant.now().toString())
+            .put("exportedAt", utcTimestamp())
             .put("treeUri", prefs[Keys.TREE_URI])
             .put("currentFolderUri", prefs[Keys.CURRENT_FOLDER_URI])
             .put("currentFileUri", prefs[Keys.CURRENT_FILE_URI])
@@ -226,4 +229,9 @@ class PreferencesRepository(private val context: Context) {
     private fun readNameKey(name: String): String =
         "name:" + Normalizer.normalize(name.trim().lowercase(), Normalizer.Form.NFD)
             .replace("\\p{Mn}+".toRegex(), "")
+
+    private fun utcTimestamp(): String =
+        SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'", Locale.US)
+            .apply { timeZone = TimeZone.getTimeZone("UTC") }
+            .format(Date())
 }

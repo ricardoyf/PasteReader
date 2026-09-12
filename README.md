@@ -1,18 +1,25 @@
 <!-- app-release:start -->
-[**Descargar APK v6**](https://github.com/ricardoyf/PasteReader/releases/download/v6/PasteReader-v6-app-debug.apk) · [SHA-256](https://github.com/ricardoyf/PasteReader/raw/refs/heads/main/checksums/PasteReader-v6-app-debug.apk.sha256)
+[**Descargar APK v7**](https://github.com/ricardoyf/PasteReader/releases/download/v7/PasteReader-v7.apk) · [SHA-256](https://github.com/ricardoyf/PasteReader/raw/refs/heads/main/checksums/PasteReader-v7.apk.sha256)
 
-`fb4ef13ab304497d675993cc29991c637a925134393ac6ce556fd95622fafce9`
+`6e99170dd93150df50522fa5f057a827391a08566c3672c72e5641c8bfba0bca`
 <!-- app-release:end -->
 
-# PasteReader v6
+# PasteReader v7
 
 App Android nativa en Kotlin + Jetpack Compose para pegar un texto cualquiera y escucharlo al momento con el TTS nativo de Android.
 
 ## APK
 
-La versión compilada incluida en el repositorio es:
+La versión instalable y compatible con las versiones anteriores está publicada en GitHub Releases:
 
-[`PasteReader-v6-app-debug.apk`](./PasteReader-v6-app-debug.apk)
+[`PasteReader-v7.apk`](https://github.com/ricardoyf/PasteReader/releases/download/v7/PasteReader-v7.apk)
+
+## Novedad de v7
+
+- La lectura y el resaltado conservan la palabra actual al girar el móvil entre vertical y horizontal.
+- Si Android necesita recrear el motor TTS, la lectura se reanuda automáticamente desde el último offset conocido.
+- Una lectura pausada sigue pausada después de la rotación y Play continúa desde el mismo punto.
+- Stop y el final de la lectura sí dejan el siguiente Play preparado desde el principio.
 
 ## Qué hace
 
@@ -39,16 +46,18 @@ La etiqueta visible de la app es:
 PasteReader
 ```
 
-## Compilar APK
+## Compilar
 
 ```bash
-./gradlew assembleDebug
+./gradlew testDebugUnitTest lintDebug assembleDebug
 ```
 
-APK generado:
+APK de CI generado:
 
 ```text
 app/build/outputs/apk/debug/app-debug.apk
 ```
+
+Ese APK usa una firma efímera de CI y se publica únicamente como `PasteReader-CI-NO-DISTRIBUIR`; no sustituye al APK compatible de GitHub Releases.
 
 Requisitos: JDK 17 y Android SDK 34.

@@ -19,8 +19,8 @@ android {
         applicationId = "com.ricardo.pastereader"
         minSdk = 24
         targetSdk = 34
-        versionCode = 6
-        versionName = "v6"
+        versionCode = 7
+        versionName = "v7"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables.useSupportLibrary = true
